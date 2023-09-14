@@ -24,7 +24,8 @@ fastify.post('/sendEmail', async (request, reply) => {
 });
 
 fastify.listen({
-  port: 4000
+  port: 4000,
+  host: '0.0.0.0'
 }, (err, address) => {
   if (err) {
     fastify.log.error(err)
