@@ -1,15 +1,21 @@
 {
   "name": "currency-tracker-mail-backend",
   "version": "1.0.0",
-  "main": "index.js",
-  "type": "module",
-  "license": "MIT",
+  "main": "app.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "fastify start -l info app.js",
+    "dev": "fastify start -w -l info -P app.js"
+  },
   "dependencies": {
+    "@fastify/autoload": "^5.7.1",
+    "@fastify/sensible": "^5.2.0",
     "@fastify/cors": "^8.3.0",
     "@fastify/formbody": "^7.4.0",
     "dotenv": "^16.3.1",
-    "fastify": "^4.22.2",
-    "fastify-mailgun": "^1.0.0",
+    "fastify": "^4.23.2",
+    "fastify-cli": "^5.8.0",
+    "fastify-plugin": "^4.5.1",
     "mailgun.js": "^9.2.1"
   }
 }
